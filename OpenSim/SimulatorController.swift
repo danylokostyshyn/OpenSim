@@ -39,9 +39,9 @@ struct SimulatorController {
                             let udid = deviceJson["udid"] {
                             let device = Device(udid: udid, type: name, name: name, state: state, availability: availability)
 
-                            if device.availability == .available {
+//                            if device.availability == .available {
                                 runtime.devices.append(device)
-                            }
+//                            }
                             runtime.devices.sort(by: { (d1, d2) -> Bool in
                                 return d1.name.compare(d2.name) == .orderedAscending
                             })
